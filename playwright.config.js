@@ -85,7 +85,7 @@ module.exports = defineConfig({
     video: "retain-on-failure",
 
     launchOptions: {
-      slowMo: 1000,
+      slowMo: 2000,
     },
 
     /* Base URL to use in actions like `await page.goto('/')`. */

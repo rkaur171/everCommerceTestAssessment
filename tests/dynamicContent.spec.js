@@ -30,7 +30,7 @@ test("Verify dynamic content is generated when page is refreshed", async({ page 
     await expect(page.getByRole('img').nth(3)).toBeVisible();
 
     //Visual validation with screenshot
-    await expect.soft(page).not.toHaveScreenshot()
+    await expect.soft(page).toHaveScreenshot()
 
     //Web page reloaded
     await page.reload();
@@ -40,7 +40,7 @@ test("Verify dynamic content is generated when page is refreshed", async({ page 
     await expect(page.getByRole('img').nth(3)).toBeVisible();
 
     //Visual validation with screenshot
-    await expect.soft(page).not.toHaveScreenshot()
+    await expect.soft(page).toHaveScreenshot()
 
     await expect(page.locator('#page-footer')).toBeVisible();
     await expect(page.locator('#page-footer')).toContainText('Powered by Elemental Selenium');
